@@ -11,8 +11,14 @@ import {
   Select,
 } from "@material-ui/core";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import earner from "../assets/earner.svg";
 import working from "../assets/working.svg";
+import {
+  ColumnsWrapper,
+  FirstColumn,
+  SecondColumn,
+} from "../components/animation/helpers";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -29,33 +35,26 @@ const Main = () => {
   const [option, setOption] = useState("");
   const classes = useStyles();
 
+  const history = useHistory();
+
   const handleChange = (e) => {
     setOption(e.target.value);
   };
 
+  const handleNext = () => {
+    switch (option) {
+      case "rise":
+        history.push("/rise");
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
-    <div
-      css={css`
-        display: flex;
-        @media only screen and (max-width: 800px) {
-          flex-direction: column;
-        }
-      `}
-    >
-      <section
-        css={css`
-          width: 50%;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          flex-direction: column;
-          padding: 24px;
-          @media only screen and (max-width: 800px) {
-            width: 100%;
-          }
-        `}
-      >
+    <ColumnsWrapper>
+      <FirstColumn>
         <div>
           <div>
             <img
@@ -93,9 +92,9 @@ const Main = () => {
                 onChange={handleChange}
                 label="Wybierz"
               >
-                <MenuItem value={"awans"}>Chciałabym awansować</MenuItem>
-                <MenuItem value={"podwyzka"}>Staram się o podwyżkę</MenuItem>
-                <MenuItem value={"branza"}>Chciałabym zmienić branżę</MenuItem>
+                <MenuItem value={"promotion"}>Chciałabym awansować</MenuItem>
+                <MenuItem value={"rise"}>Staram się o podwyżkę</MenuItem>
+                <MenuItem value={"change"}>Chciałabym zmienić branżę</MenuItem>
               </Select>
             </FormControl>
             <div
@@ -105,26 +104,14 @@ const Main = () => {
                 justify-content: flex-end;
               `}
             >
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" onClick={handleNext}>
                 Dalej
               </Button>
             </div>
           </div>
         </div>
-      </section>
-      <section
-        css={css`
-          background-color: #fff3e6;
-          width: 50%;
-          min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @media only screen and (max-width: 800px) {
-            width: 100%;
-          }
-        `}
-      >
+      </FirstColumn>
+      <SecondColumn>
         <div
           css={css`
             padding: 24px;
@@ -138,8 +125,8 @@ const Main = () => {
             `}
           />
         </div>
-      </section>
-    </div>
+      </SecondColumn>
+    </ColumnsWrapper>
   );
 };
 
