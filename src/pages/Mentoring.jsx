@@ -85,6 +85,9 @@ const Mentoring = () => {
               css={css`
                 margin-top: 100px;
                 padding: 24px;
+                @media only screen and (max-width: 800px) {
+                  width: 100%;
+                }
               `}
             />
           </div>
@@ -107,6 +110,9 @@ const Mentoring = () => {
         <section
           css={css`
             display: flex;
+            @media only screen and (max-width: 800px) {
+              flex-direction: column;
+            }
           `}
         >
           <div
@@ -115,6 +121,9 @@ const Mentoring = () => {
               margin: 6px;
               width: 33%;
               height: 300px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>
@@ -148,6 +157,9 @@ const Mentoring = () => {
               margin: 6px;
               width: 33%;
               height: 300px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>
@@ -181,6 +193,9 @@ const Mentoring = () => {
               margin: 6px;
               width: 33%;
               height: 300px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>

@@ -59,6 +59,9 @@ const Main = () => {
           display: flex;
           justify-content: center;
           align-items: center;
+          @media only screen and (max-width: 800px) {
+            padding: 24px;
+          }
         `}
       >
         <h1
@@ -73,6 +76,9 @@ const Main = () => {
       <div
         css={css`
           display: flex;
+          @media only screen and (max-width: 800px) {
+            flex-direction: column;
+          }
         `}
       >
         <div
@@ -80,6 +86,10 @@ const Main = () => {
             width: 50%;
             background-color: #fe676e;
             padding: 48px 11%;
+            @media only screen and (max-width: 800px) {
+              width: 100%;
+              padding: 24px;
+            }
           `}
         >
           <h1>Potrzebuję argumentów do rozmowy z managerem</h1>
@@ -97,6 +107,8 @@ const Main = () => {
             src={group73}
             alt=""
             css={css`
+              padding: 24px;
+
               width: 100%;
             `}
           />
@@ -106,6 +118,10 @@ const Main = () => {
             width: 50%;
             background-color: #ffbd71;
             padding: 48px 11%;
+            @media only screen and (max-width: 800px) {
+              width: 100%;
+              padding: 24px;
+            }
           `}
         >
           <h1>Potrzebuję coachingu I wsparcia mentalnego</h1>

@@ -18,6 +18,7 @@ export const FirstColumn = styled.section`
   padding: 24px;
   @media only screen and (max-width: 800px) {
     width: 100%;
+    padding: 24px;
   }
 `;
 
@@ -38,6 +39,5 @@ export const SecondColumn = styled.section`
 `;
 
 export const StepWrapper = styled.div`
-  width: 320px;
   min-height: 520px;
 `;

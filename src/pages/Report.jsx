@@ -162,6 +162,9 @@ const Report = () => {
               css={css`
                 margin-top: 100px;
                 padding: 24px;
+                @media only screen and (max-width: 800px) {
+                  width: 100%;
+                }
               `}
             />
           </div>
@@ -181,9 +184,18 @@ const Report = () => {
             margin-left: 10%;
             padding: 24px;
             width: 40%;
+            @media only screen and (max-width: 800px) {
+              width: 100%;
+            }
           `}
         >
-          <img src={group150} alt="" />
+          <img
+            src={group150}
+            alt=""
+            css={css`
+              width: 100%;
+            `}
+          />
         </div>
         <div
           css={css`
@@ -228,6 +240,9 @@ const Report = () => {
           min-height: 100vh;
           background-color: #fff3e6;
           padding: 24px 15%;
+          @media only screen and (max-width: 800px) {
+            padding: 24px;
+          }
         `}
       >
         <h1
@@ -244,9 +259,6 @@ const Report = () => {
             @media only screen and (max-width: 800px) {
               flex-direction: column;
               padding: 24px;
-              & > div {
-                width: 100%;
-              }
             }
           `}
         >
@@ -256,6 +268,9 @@ const Report = () => {
               margin: 6px;
               min-height: 320px;
               width: 33%;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>
@@ -308,6 +323,9 @@ const Report = () => {
               background-color: #ffbd71;
               margin: 6px;
               width: 33%;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>
@@ -363,6 +381,9 @@ const Report = () => {
               background-color: #ffbd71;
               margin: 6px;
               width: 33%;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
             `}
           >
             <div>
@@ -419,6 +440,9 @@ const Report = () => {
           background-color: #f99746;
           min-height: 100vh;
           padding: 24px 11%;
+          @media only screen and (max-width: 800px) {
+            padding: 24px;
+          }
         `}
       >
         <h1
@@ -442,6 +466,9 @@ const Report = () => {
           css={css`
             position: relative;
             height: 6rem;
+            @media only screen and (max-width: 800px) {
+              display: none;
+            }
           `}
         >
           <div
