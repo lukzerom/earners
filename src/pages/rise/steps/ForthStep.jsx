@@ -98,7 +98,7 @@ const ForthStep = () => {
       >
         <TextField
           id="standard-basic"
-          label="Dodaj nazwę wolontariatu"
+          label="Dodaj nazwę nagrody"
           className={classes.formControl}
           value={price}
           onChange={(e) => setPrice(e.target.value)}
@@ -112,7 +112,7 @@ const ForthStep = () => {
           margin: 12px 0;
         `}
       >
-        Dodaj Wolontariat
+        Dodaj Nagrodę
       </Button>
       <div>
         {prices.map((e) => {

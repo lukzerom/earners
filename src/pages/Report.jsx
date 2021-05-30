@@ -4,7 +4,9 @@ import { css, jsx } from "@emotion/react";
 import { Button } from "@material-ui/core";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
 import artificialIntelligence from "../assets/artificial-intelligence.svg";
+import ball from "../assets/ball.png";
 import earner from "../assets/earner.svg";
+import group149 from "../assets/group149.svg";
 import group150 from "../assets/group150.svg";
 import konewka from "../assets/konewka.svg";
 import network from "../assets/network.svg";
@@ -380,40 +382,75 @@ const Report = () => {
         >
           Możesz ubiegać się nawet o wyższą podwyżkę niż oczekujesz
         </h1>
-        <div
+        <section
           css={css`
-            display: flex;
-            width: 100%;
+            position: relative;
+            height: 6rem;
           `}
         >
           <div
             css={css`
-              background-color: #fff3e6;
-              width: 40%;
-              padding: 6px 12px;
+              border-bottom: 4px solid #fe676e;
+              display: inline-block;
+              position: absolute;
+              left: 30%;
+              top: 0;
             `}
           >
-            Min 5000 zł netto
+            Zarabiasz 7000 zł netto
           </div>
           <div
             css={css`
-              background-color: #fff3e6;
-              width: 20%;
-              padding: 6px 12px;
-              border-right: 4px solid #fe676e;
-              border-left: 4px solid #fe676e;
-            `}
-          ></div>
-          <div
-            css={css`
-              background-color: #fff3e6;
-              width: 40%;
-              padding: 6px 12px;
+              display: flex;
+              width: 100%;
+              position: absolute;
+              top: 2rem;
             `}
           >
-            Max 12 000 zł netto
+            <div
+              css={css`
+                background-color: #fff3e6;
+                width: 40%;
+                padding: 6px 12px;
+                display: flex;
+                justify-content: flex-start;
+              `}
+            >
+              Min 5000 zł netto
+            </div>
+            <div
+              css={css`
+                background-color: #fff3e6;
+                width: 20%;
+                padding: 6px 12px;
+                border-right: 4px solid #fe676e;
+                border-left: 4px solid #fe676e;
+              `}
+            ></div>
+            <div
+              css={css`
+                background-color: #fff3e6;
+                width: 40%;
+                padding: 6px 12px;
+                display: flex;
+                justify-content: flex-end;
+              `}
+            >
+              Max 12 000 zł netto
+            </div>
           </div>
-        </div>
+          <div
+            css={css`
+              border-top: 4px solid #fe676e;
+              display: inline-block;
+              position: absolute;
+              left: 50%;
+              top: 4.5rem;
+            `}
+          >
+            Chcesz zarabiać 8000 zł netto
+          </div>
+        </section>
         <h1
           css={css`
             font-size: 2rem;
@@ -424,6 +461,127 @@ const Report = () => {
           Masz bardzo dużo umiejętności dodatkowych przydatnych na Twoim
           Stanowisku
         </h1>
+        <div
+          css={css`
+            display: flex;
+            @media only screen and (max-width: 800px) {
+              flex-direction: column;
+            }
+          `}
+        >
+          <div
+            css={css`
+              width: 25%;
+              padding: 16px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
+            `}
+          >
+            <img
+              src={ball}
+              alt=""
+              css={css`
+                width: 100%;
+              `}
+            />
+          </div>
+          <div
+            css={css`
+              width: 25%;
+              padding: 16px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
+            `}
+          >
+            <h1>90% osób na Twoim stanowisku nie zna Adobe After Effects</h1>
+          </div>
+          <div
+            css={css`
+              width: 25%;
+              padding: 16px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
+            `}
+          >
+            <img
+              src={ball}
+              alt=""
+              css={css`
+                width: 100%;
+              `}
+            />
+          </div>
+          <div
+            css={css`
+              width: 25%;
+              padding: 16px;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
+            `}
+          >
+            <h1>90% osób na Twoim stanowisku nie zna programów do 3D</h1>
+          </div>
+        </div>
+      </section>
+      <section
+        css={css`
+          background-color: #fe676e;
+          display: flex;
+          @media only screen and (max-width: 800px) {
+            flex-direction: column;
+          }
+        `}
+      >
+        <div
+          css={css`
+            width: 50%;
+            padding: 24px;
+            @media only screen and (max-width: 800px) {
+              width: 100%;
+            }
+          `}
+        >
+          <img
+            src={group149}
+            alt=""
+            css={css`
+              width: 100%;
+              @media only screen and (max-width: 800px) {
+                width: 100%;
+              }
+            `}
+          />
+        </div>
+        <div
+          css={css`
+            width: 50%;
+            padding: 24px;
+            @media only screen and (max-width: 800px) {
+              width: 100%;
+            }
+          `}
+        >
+          <h1
+            css={css`
+              font-size: 2rem;
+              font-weight: 700;
+              color: white;
+            `}
+          >
+            Trzymamy za Ciebie kciuki
+          </h1>
+          <h2>
+            Przygotuj się z nami do rozmowy, żeby z większym prawdopodobieństwem
+            zakończyć ją sukcesem
+          </h2>
+          <Button variant="contained" color="primary">
+            Sprawdź
+          </Button>
+        </div>
       </section>
     </div>
   );
