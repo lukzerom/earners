@@ -2,7 +2,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 import { Button } from "@material-ui/core";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import artificialIntelligence from "../assets/artificial-intelligence.svg";
 import ball from "../assets/ball.png";
 import earner from "../assets/earner.svg";
@@ -12,6 +15,19 @@ import konewka from "../assets/konewka.svg";
 import network from "../assets/network.svg";
 
 const Report = () => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 100 : prevProgress + 30
+      );
+    }, 800);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
   return (
     <div>
       <section
@@ -23,6 +39,39 @@ const Report = () => {
           }
         `}
       >
+        {progress < 100 && (
+          <div
+            css={css`
+              width: 100vw;
+              height: 100vh;
+              background-color: white;
+              position: fixed;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 10;
+            `}
+          >
+            <div
+              css={css`
+                width: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              `}
+            >
+              <h1>AI is processing your data</h1>
+              <i class="fas fa-robot"></i>
+              <CircularProgress
+                variant="determinate"
+                value={progress}
+                size={200}
+              />
+            </div>
+          </div>
+        )}
+
         <div
           css={css`
             width: 60%;
@@ -50,7 +99,7 @@ const Report = () => {
               font-weight: 700;
             `}
           >
-            Anita, mamy dla Ciebie propozycje jak możesz więcej zarabiać
+            Aneta, mamy dla Ciebie propozycje jak możesz więcej zarabiać
           </h1>
           <h2>Zobacz jakich argumentów użyć podczas rozmowy o podwyżkę</h2>
           <div
@@ -162,9 +211,16 @@ const Report = () => {
             naszą ścieżkę 12 kroków do podwyżki która pomoże Ci w bezstresowej
             rozmowie
           </h2>
-          <Button variant="contained" color="primary">
-            Dalej
-          </Button>
+          <Link
+            to="/mentoring"
+            css={css`
+              text-decoration: none;
+            `}
+          >
+            <Button variant="contained" color="primary">
+              Dalej
+            </Button>
+          </Link>
         </div>
       </section>
       <section

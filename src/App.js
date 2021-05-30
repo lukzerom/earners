@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { firebaseConfig } from "./firebase";
 import Main from "./pages/Main";
+import MainPage from "./pages/MainPage";
+import Mentoring from "./pages/Mentoring";
 import Report from "./pages/Report";
 import Rise from "./pages/rise/Rise";
 
@@ -32,7 +34,9 @@ function App() {
           <Switch>
             <Route exact path="/report" component={Report} />
             <Route exact path="/rise" component={Rise} />
-            <Route exact path="/" component={Main} />
+            <Route exact path="/arguments" component={Main} />
+            <Route exact path="/mentoring" component={Mentoring} />
+            <Route exact path="/" component={MainPage} />
           </Switch>
         </Router>
       </ThemeProvider>
