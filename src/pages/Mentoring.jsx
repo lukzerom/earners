@@ -44,7 +44,7 @@ const Mentoring = () => {
               font-weight: 700;
             `}
           >
-            Cieszymy się, że chcesz Się z nami rozwijać
+            Cieszymy się, że chcesz się z nami rozwijać
           </h1>
           <h3>
             Poznaj nasze kroki przygotowujące do rozmowy rozwojowej. Odpowiedz
@@ -102,7 +102,7 @@ const Mentoring = () => {
             font-weight: 700;
           `}
         >
-          Cieszymy się, że chcesz Się z nami rozwijać
+          Poznaj nasze plany subskrypcyjne
         </h1>
         <section
           css={css`
