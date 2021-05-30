@@ -42,14 +42,7 @@ const Main = () => {
   };
 
   const handleNext = () => {
-    switch (option) {
-      case "rise":
-        history.push("/rise");
-        break;
-
-      default:
-        break;
-    }
+    history.push("/rise");
   };
 
   return (
